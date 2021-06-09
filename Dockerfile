@@ -2,7 +2,7 @@ FROM larueli/php-base-image:7.4
 
 USER 0
 
-ARG NEXTCLOUD_VERSION=21.0.1
+ARG NEXTCLOUD_VERSION=21.0.2
 
 COPY site.conf /etc/apache2/sites-available/000-default.conf
 
