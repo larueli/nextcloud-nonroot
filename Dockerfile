@@ -5,6 +5,7 @@ USER 0
 ARG NEXTCLOUD_VERSION=21.0.4
 
 COPY site.conf /etc/apache2/sites-available/000-default.conf
+COPY nextcloud-php.ini /usr/local/etc/php/conf.d/nextcloud-php.ini
 
 RUN apt-get update && apt-get install -y ffmpeg && \
     wget https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.zip && unzip nextcloud-${NEXTCLOUD_VERSION}.zip && rm nextcloud-${NEXTCLOUD_VERSION}.zip && \
