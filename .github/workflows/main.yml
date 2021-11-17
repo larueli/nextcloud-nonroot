@@ -22,8 +22,6 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    env:
-      NEXTCLOUD_VERSION: 22.2.3
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -43,8 +41,9 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          build-args: NEXTCLOUD_VERSION=$NEXTCLOUD_VERSION
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/nextcloud-nonroot:$NEXTCLOUD_VERSION
+#          build-args: NEXTCLOUD_VERSION=$NEXTCLOUD_VERSION
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/nextcloud-nonroot:latest
       
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
+     
