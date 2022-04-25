@@ -2,7 +2,7 @@ FROM larueli/php-base-image:8.0
 
 USER 0
 
-ARG NEXTCLOUD_VERSION=23.0.3
+ARG NEXTCLOUD_VERSION=23.0.4
 
 COPY site.conf /etc/apache2/sites-available/000-default.conf
 COPY nextcloud-php.ini /usr/local/etc/php/conf.d/nextcloud-php.ini
