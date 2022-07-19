@@ -1,6 +1,6 @@
 # nextcloud-nonroot
 
-## Beautiful URL
+## Beautiful URLs
 
 1. Edit your config file in your container `nano /var/www/html/config/config.php` then add `'htaccess.RewriteBase' => '/',`
 
